@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Smart Ride Booking</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Smart Ride Booking for People with Disabilities</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ride-history.html">Ride History</a></li>
+                <li><a href="drivers.html">Drivers</a></li>
+                <li><a href="user-profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Accessibility Toolbar -->
+    <div class="accessibility-toolbar">
+        <button onclick="toggleTextSize()">A+</button>
+        <button onclick="toggleDarkMode()">Dark Mode</button>
+        <button onclick="toggleHighContrast()">High Contrast</button>
+    </div>
+
+    <main>
+        <section>
+            <h2>Book a Ride</h2>
+            <form id="rideForm">
+                <label for="pickup">Pickup Location:</label>
+                <input type="text" id="pickup" required />
+                <button type="button" onclick="startVoiceInput('pickup')">🎤</button>
+
+                <label for="drop">Drop Location:</label>
+                <input type="text" id="drop" required />
+                <button type="button" onclick="startVoiceInput('drop')">🎤</button>
+
+                <label for="rideType">Ride Type:</label>
+                <select id="rideType" required>
+                    <option value="standard">Standard</option>
+                    <option value="accessible">Accessible (Wheelchair Friendly)</option>
+                    <option value="withAssistant">With Assistant</option>
+                </select>
+
+                <label for="emergency">Emergency Contact:</label>
+                <input type="text" id="emergency" placeholder="Name & Phone Number" />
+
+                <label for="payment">Payment Method:</label>
+                <select id="payment" required>
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cash">Cash</option>
+                </select>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart Ride Booking</p>
+    </footer>
+</body>
+</html>
